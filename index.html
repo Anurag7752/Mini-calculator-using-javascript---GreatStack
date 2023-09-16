@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini calculator using javascript - GreatStack</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="hero">
+            <div class="Calendar">
+                <div class="Left">
+                    <p id="date">01</p>
+                    <p id="day">Sunday</p>
+                </div>
+                <div class="right">
+                    <p id="Month">january</p>
+                    <p id="year">2023</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            const date = document.getElementById("date");
+            const day = document.getElementById("day");
+            const Month = document.getElementById("Month");
+            const year = document.getElementById("year");
+
+            const today = new Date();
+
+            const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "saturday"];
+            const allMonths = ["january", "february", "March", "April", "May", "june", "july", "August", "september", "october", "November", "December"];
+
+            console.log(today);
+
+            date.innerHTML = (today.getDate() < 10 ? "0" : "") + today.getDate();
+            day.innerHTML = weekDays[today.getDays()];
+            Month.innerHTML = allMonths[today.getMonth()];
+            year.innerHTML = today.getFullYear();
+
+
+        </script>
+
+    </body>
+
+</html>
